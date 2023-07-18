@@ -52,7 +52,4 @@ public class TestCases {
         System.out.println("total Counts: "+ eleListCount.size());
         System.out.println("end Test case: TC_CountHyperlinks");
     }
-
-
-
 }
