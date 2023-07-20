@@ -10,7 +10,14 @@ public class App {
         TestCases tests = new TestCases(); // Initialize your test class
 
         //TODO: call your test case functions one after other here
-        tests.TC_CountHyperlinks();
+
+        ////INTV-1/Session-6/2/Automate_count_hyperlinks
+        //tests.TC_CountHyperlinks();
+
+        ////INTV-1/Session-6/4/Automate_google_name_links
+        tests.TC_GoogleNameLinks();
+
+        
         //tests.testCase01();
         //END Tests
 

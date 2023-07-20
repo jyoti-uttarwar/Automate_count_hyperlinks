@@ -52,4 +52,23 @@ public class TestCases {
         System.out.println("total Counts: "+ eleListCount.size());
         System.out.println("end Test case: TC_CountHyperlinks");
     }
+
+    public  void TC_GoogleNameLinks(){
+        System.out.println("Start Test case: TC_GoogleNameLinks");
+        // Get the Url  "https://www.google.com/"
+        driver.get("https://www.google.com/");
+        // Locate the Search inputBox Using Locator "ID" "APjFqb"
+        WebElement eleSearchBox = driver.findElement(By.id("APjFqb"));
+        // Type the input String  "Jyoti"
+        eleSearchBox.sendKeys("Jyoti");
+        // Locate the Google Search button Using Locator "XPath" "(//input[@name='btnK'])[1]"
+        WebElement eleSearchBtn = driver.findElement(By.xpath("(//input[@name='btnK'])[1]"));
+        // Click "Google search" button  
+        eleSearchBtn.click();
+        // Locate & store the links having name Using Locator "XPath" "//div[@class='yuRUbf']/a[contains(@href,'jyoti')]"
+        List<WebElement> eleListOfLinks = driver.findElements(By.xpath("//div[@class='yuRUbf']/a[contains(@href,'jyoti')]"));
+        // Print the count in the console  
+        System.out.println("Total Links : " + eleListOfLinks.size());
+        System.out.println("end Test case: TC_GoogleNameLinks");
+    }
 }
